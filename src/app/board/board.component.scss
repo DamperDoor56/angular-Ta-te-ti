@@ -1,0 +1,16 @@
+.center-me{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0px;
+}
+
+app-square{
+  border: 1px solid gray;
+  height: 150px;
+}

@@ -1,11 +1,13 @@
+<body>
 <div class="center-me">
-  <h1>Current Player: {{ player }}</h1>
+  <div class="title"><h1>Current Player: {{ player }}</h1></div>
 
-<button (click)="newGame()">Start New Game</button>
-
-<h2 *ngIf="winner">
-  Player {{ winner }} won the game!
-</h2>
+  <div class="moving-elements">
+   <button (click)="newGame()">Start New Game</button>
+    <h2 *ngIf="winner">
+     Player {{ winner }} won the game!
+    </h2>
+   </div>
 
 <main>
   <app-square
@@ -16,3 +18,4 @@
   </app-square>
 </main>
 </div>
+</body>

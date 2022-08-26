@@ -5,8 +5,8 @@ import { Component, Input } from '@angular/core';
   styleUrls:['./square.component.scss'],
   template: `
 <button nbButton *ngIf="!value">{{ value }}</button>
-<button nbButton *ngIf="value === 'X'">{{ value }}</button>
-<button [ngClass]="statusClass" (click)="setActiveClass()" nbButton *ngIf="value === 'O'">{{ value }}</button>
+<button [ngClass]="xclass" nbButton *ngIf="value === 'X'">{{ value }}</button>
+<button [ngClass]="statusClass" nbButton *ngIf="value === 'O'">{{ value }}</button>
   `,
   styles: ['']
 })
@@ -14,11 +14,8 @@ export class SquareComponent {
 
   @Input() value: 'X' | 'O';
 
+  xclass = 'x-notactive'
   statusClass = 'not-active';
-
-  setActiveClass(){
-      this.statusClass = 'active';
-  }
 
 }
 

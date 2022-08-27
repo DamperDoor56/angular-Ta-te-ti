@@ -13,6 +13,7 @@ body{
   padding: 0;
 
   .center-me{
+    width: 60%;
     color: snow;
     margin-top: 5%;
 
@@ -28,7 +29,7 @@ body{
         height: 50px;
         display: flex;
         justify-content: space-between;
-        background-color: blue ;
+        background-color: rgb(19, 30, 66) ;
 
         button{
           height: 25px;
@@ -37,6 +38,8 @@ body{
           cursor: pointer;
           font-size: 15px;
           margin: 15px;
+          background-color: #111;
+          color: red;
         }
         h2{
           font-size: 20px;
@@ -44,7 +47,7 @@ body{
       }
      main{
       display: grid;
-      grid-template-columns: 200px 200px 200px;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 0px;
   }
 
@@ -53,6 +56,22 @@ body{
   border: 1px solid rgb(0, 0, 0);
   height: 150px;
 }
-
  }
+}
+
+@media screen and(max-width: 520px) {
+  body{
+  .center-me{
+    width: 100% !important;
+
+    .moving-elements{
+      height: 100px !important;
+
+      button{
+        height: 70px !important;
+      }
+    }
+  } }
+
+
 }

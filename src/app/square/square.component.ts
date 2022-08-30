@@ -5,8 +5,8 @@ import { Component, Input } from '@angular/core';
   styleUrls:['./square.component.scss'],
   template: `
 <button nbButton *ngIf="!value">{{ value }}</button>
-<button [ngClass]="xclass" nbButton *ngIf="value === 'X'">{{ value }}</button>
-<button [ngClass]="statusClass" nbButton *ngIf="value === 'O'">{{ value }}</button>
+<button class="xclass" nbButton *ngIf="value === 'X'">{{ value }}</button>
+<button class="statusClass" nbButton *ngIf="value === 'O'">{{ value }}</button>
   `,
   styles: ['']
 })
